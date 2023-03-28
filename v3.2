@@ -1159,7 +1159,7 @@ BulletsTab:AddToggle('bullets_impactenabled', {Text = 'Bullet Impact', Default =
 BulletsTab:AddLabel('Impact Color'):AddColorPicker('bullets_impactenabledcolor', {Default = C3(0, 0, 255), Title = 'Impact Color'})
 BulletsTab:AddSlider('bullets_impacttime', {Text = 'Impact Life Time', Default = 3, Min = 1, Max = 10, Rounding = 0, Compact = false}):OnChanged(function() end)]]
 --------------------------------------------------------------------------------------
-MiscSec1:AddToggle('misc_watermark', {Text = 'Watermark', Default = false}):AddColorPicker('misc_watermarkcolor', {Default = C3(2, 103, 172), Title = 'Watermark Color'})
+MiscSec1:AddToggle('misc_watermark', {Text = 'Watermark', Default = false}):AddColorPicker('misc_watermarkcolor', {Default = C3(10, 201, 10), Title = 'Watermark Color'})
 Options.misc_watermarkcolor:OnChanged(function()
     WatermarkColor.BackgroundColor3 = Options.misc_watermarkcolor.Value
 end)
@@ -1169,7 +1169,7 @@ Toggles.misc_binds:OnChanged(function()
     Library.KeybindFrame.Visible = Toggles.misc_binds.Value
 end)
 
-MiscSec1:AddToggle('misc_spectlist', {Text = 'Show Spectators List', Default = false}):AddColorPicker('misc_spectlistcolor', {Default = C3(2, 103, 172), Title = 'List Color'})
+MiscSec1:AddToggle('misc_spectlist', {Text = 'Show Spectators List', Default = false}):AddColorPicker('misc_spectlistcolor', {Default = C3(10, 201, 10), Title = 'List Color'})
 Options.misc_spectlistcolor:OnChanged(function()
     SpectColor.BackgroundColor3 = Options.misc_spectlistcolor.Value
 end)
@@ -2216,7 +2216,7 @@ function Movement()
                         getsenv(localPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).createNewMessage(
                             "Luckynave",
                             "edgebugged",
-                            C3(2, 103, 172), 
+                            C3(10, 201, 10), 
                             Color3.new(1,1,1),
                             .01)
                     end
@@ -2319,3 +2319,4 @@ end)
 
 Library:Notify('Finished Loading! Welcome ' ..localPlayer.Name.. ' to Luckynave');
 Library:Notify("Took to load "..string.format("%.5f", tick() - LoadingTime).." seconds.");
+
