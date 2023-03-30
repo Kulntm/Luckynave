@@ -1425,7 +1425,7 @@ Toggles.mod_recoil:OnChanged(function()
 end)]]
 --------------------------------------------------------------------------------------
 MenuGroup:AddButton('Unload', function() Library:Unload() end)
-MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'End', NoUI = true, Text = 'Menu keybind' })
+MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'RightShift', NoUI = true, Text = 'Menu keybind' })
 
 Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
 
@@ -1436,8 +1436,8 @@ SaveManager:IgnoreThemeSettings()
 
 SaveManager:SetIgnoreIndexes({ 'MenuKeybind' }) 
 
-ThemeManager:SetFolder('Luckynave.topG')
-SaveManager:SetFolder('Luckynave.topG/main')
+ThemeManager:SetFolder('pepsi.club')
+SaveManager:SetFolder('pepsi.club/main')
 
 SaveManager:BuildConfigSection(Tabs['UI Settings']) 
 
