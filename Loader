@@ -1357,8 +1357,8 @@ Options.hit_hitsoundtype:OnChanged(function()
         HitSoundType = 3124331820
     elseif Options.hit_hitsoundtype.Value == "Bell" then
         HitSoundType = 6534947240
-    elseif Options.hit_hitsoundtype.Value == "Bubble" then
-        HitSoundType = 6534947588
+    elseif Options.hit_hitsoundtype.Value == "metal" then
+        HitSoundType = 12945269798
     elseif Options.hit_hitsoundtype.Value == "Pick" then
         HitSoundType = 1347140027    
     elseif Options.hit_hitsoundtype.Value == "Pop" then
@@ -2319,4 +2319,3 @@ end)
 
 Library:Notify('Finished Loading! Welcome ' ..localPlayer.Name.. ' to Luckynave');
 Library:Notify("Took to load "..string.format("%.5f", tick() - LoadingTime).." seconds.");
-
