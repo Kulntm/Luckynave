@@ -12,7 +12,7 @@ Library:Notify('Loading UI...');
 wait(3)
 ------------------------------------ WINDOW -----------------------------------
 local Window = Library:CreateWindow({
-    Title = 'luckynave',
+    Title = 'Luckynave',
     Center = true, 
     AutoShow = true,
 })
@@ -187,7 +187,7 @@ Text.Position = UDim2.new(0.0230768919, 0, 0, 0)
 Text.Size = UDim2.new(0.48046875, 0, 1, 0)
 Text.ZIndex = 4
 Text.Font = Enum.Font.RobotoMono
-Text.Text = "Luckynave | V6"
+Text.Text = "Luckynave | user"
 Text.TextColor3 = C3(65025, 65025, 65025)
 Text.TextSize = 14.000
 Text.TextStrokeTransparency = 0.000
@@ -560,7 +560,7 @@ as_fov_circle.Filled = false
 as_fov_circle.Visible = false
 as_fov_circle.ZIndex = 10
 as_fov_circle.Transparency = 1
-as_fov_circle.Color = C3(10, 201, 10)
+as_fov_circle.Color = C3(54, 57, 241)
 local as_fov_circleout2 = Drawing.new("Circle")
 as_fov_circleout2.Thickness = 1
 as_fov_circleout2.NumSides = 100
@@ -1053,18 +1053,18 @@ WRLTab:AddToggle('wrl_skyboxenabled', {Text = 'Skybox', Default = false}):OnChan
 WRLTab:AddDropdown('wrl_skyboxtype', {Values = {"Galaxy","Pink Sky","Sunset","Night","Evening"}, Default = 1, Multi = false, Text = 'Selected'})
 Options.wrl_skyboxtype:OnChanged(function()
     if Toggles.wrl_skyboxenabled.Value == true then
-        local luckysky = lighting:FindFirstChild("luckysky") or Instance.new("Sky")
-        luckynavesky.Parent = game.Lighting
-        luckynavesky.Name = "luckynavesky"
-        luckynavesky.SkyboxBk = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxBk
-        luckynavesky.SkyboxDn = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxDn
-        luckynavesky.SkyboxFt = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxFt
-        luckynavesky.SkyboxLf = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxLf
-        luckynavesky.SkyboxRt = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxRt
-        luckynavesky.SkyboxUp = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxUp
+        local pepsisky = lighting:FindFirstChild("pepsisky") or Instance.new("Sky")
+        pepsisky.Parent = game.Lighting
+        pepsisky.Name = "pepsisky"
+        pepsisky.SkyboxBk = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxBk
+        pepsisky.SkyboxDn = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxDn
+        pepsisky.SkyboxFt = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxFt
+        pepsisky.SkyboxLf = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxLf
+        pepsisky.SkyboxRt = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxRt
+        pepsisky.SkyboxUp = SkyboxesTable[Options.wrl_skyboxtype.Value].SkyboxUp
     else
-        if game.Lighting:FindFirstChild("luckynavesky") then
-            game.Lighting.luckynavesky:Destroy()
+        if game.Lighting:FindFirstChild("pepsisky") then
+            game.Lighting.pepsisky:Destroy()
         end
     end
 end)
@@ -1425,7 +1425,7 @@ Toggles.mod_recoil:OnChanged(function()
 end)]]
 --------------------------------------------------------------------------------------
 MenuGroup:AddButton('Unload', function() Library:Unload() end)
-MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'RightShift', NoUI = true, Text = 'Menu keybind' })
+MenuGroup:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', { Default = 'End', NoUI = true, Text = 'Menu keybind' })
 
 Library.ToggleKeybind = Options.MenuKeybind -- Allows you to have a custom keybind for the menu
 
@@ -2317,6 +2317,5 @@ runService.RenderStepped:Connect(function()
     do Misc() end
 end)
 
-Library:Notify('Finished Loading! Welcome ' ..localPlayer.Name.. ' to Luckynave');
+Library:Notify('Finished Loading! Welcome ' ..localPlayer.Name.. ' to Luckyanve!');
 Library:Notify("Took to load "..string.format("%.5f", tick() - LoadingTime).." seconds.");
-
